@@ -18,6 +18,9 @@ pub use rpc::*;
 pub use sync::*;
 pub use tx_pool::*;
 
+mod debug;
+pub use debug::*;
+
 use crate::Node;
 use ckb_app_config::CKBAppConfig;
 
