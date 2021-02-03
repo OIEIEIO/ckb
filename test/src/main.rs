@@ -9,7 +9,6 @@ use ckb_test::{
 use ckb_types::core::ScriptHashType;
 use ckb_util::Mutex;
 use clap::{value_t, App, Arg};
-use rand::{seq::SliceRandom, thread_rng};
 use std::any::Any;
 use std::cmp::min;
 use std::env;
@@ -480,7 +479,6 @@ fn all_specs() -> Vec<Box<dyn Spec>> {
         Box::new(RelayTooNewBlock),
         Box::new(LastCommonHeaderForPeerWithWorseChain),
     ];
-    specs.shuffle(&mut thread_rng());
     specs
 }
 
